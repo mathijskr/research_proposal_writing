@@ -1,0 +1,6 @@
+*.aux
+*.gz
+*.log
+*.el
+.auctex-auto/
+MathijsDeKremer.pdf
