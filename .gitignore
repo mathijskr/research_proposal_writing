@@ -2,5 +2,8 @@
 *.gz
 *.log
 *.el
+*.bbl
+*.blg
 .auctex-auto/
 MathijsDeKremer.pdf
+

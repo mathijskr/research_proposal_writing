@@ -1,29 +1,37 @@
-\subsection*{Number and title of the proposal}
+\subsubsection*{Number and title of the proposal}
 1. How I Learned to Stop Worrying and Love Unreliable Hardware
 
-\subsection*{What is the scholarly, scientific or technological relevance of the problem? Is the problem original, timely, challenging?}
-- Context of increasing hardware vulnerabilities.
-- Higher transistor density -> decreased reliability.
+\subsubsection*{What is the scholarly, scientific or technological relevance of the problem? Is the problem original, timely, challenging?}
+We have arrived in an era where dynamic random-access memory (DRAM) is fundamentally broken. Cell density has increased to a point where physical effects such as electron diffusion and drift can cause data corruption \cite{dram_physics}. The proposal is relevant and timely as long as DRAM vendors will not fundamentally change their designs. It is unlikely that DRAM vendors will change their design soon because it is not possible without inventing a new technology or slowing down the performance of existing technology (by decreasing cell density). The infeasibility of fundamentally solving the problem makes the problem also a challenging problem to solve. Solutions will need to mitigate problems arising from fundamentally broken hardware. The problem is not particulary original, since multiple papers have already covered Rowhammer (defenses), such as \cite{brasser2016cant} and \cite{van2016drammer}. However, none of the solutions completely solved the problem, which makes the problem still relevant.
 
-\subsection*{What are the innovative and original aspects of the proposal? Are the project objectives challenging and scientifically ground-breaking?}
-- Generic defense against all hardware vulnerabilities.
-- "Bandage", real solution would be fixing hardware.
-- Not foundational research, big practical and engineering part.
+\subsubsection*{What are the innovative and original aspects of the proposal? Are the project objectives challenging and scientifically ground-breaking?}
+The proposed solution will defend against all possible DRAM corruption vulnerabilities on all possible hardware configurations. This generality makes the project original, since existing solutions either modify hardware or are system-specifc. The project is also challenging because of the sheer complexity of the software stack and the need to generalize over all possible software stacks. However, the project is not particularly ground-breaking nor foundational because of the nature of the problem. The project is an engineering effort to mitigate a fundamental flaw in DRAM, which is challening but will not lead to foundationally new insights in the scientific community. The idea of separation into secure and insecure protection domains is also not original \cite{efficient_protection}, application to Rowhammer is, however.
 
-\subsection*{Is the approach suitable, including a practical work programme? How do you assess the program of work described in the proposal (realistic, feasible, ...)?}
-- Three projects.
-- Reverse engineering all existing and future chip row mappings is not realistic. More feasible to come up with a protocol that hw vendors can implement.
-- Other two projects are feasible.
+\subsubsection*{Is the approach suitable, including a practical work programme? How do you assess the program of work described in the proposal (realistic, feasible, ...)?}
+The project is divided into three work packages: ``secure partitioning'', ``operating system support'', ``and mitigating attacks''. I assess the ``secure partitioning'' as infeasibile because to solve the problem generically the author of the proposal will need to reverse engineer all affected DRAM chips, since DRAM vendors do not share the required information. Reverse engineering the mapping of one DRAM chip via side-channels is challenging, let alone reverse engineering the mappings of all affected DRAM chips. The ``operating system'' work package is feasible because existing mechanisms of operating systems can be used and the author has expressed to have previous experience in this area. The ``mitigating attacks'' work package is also realistic because the author proposes several approaches, of which the token bucket rate limiter is the simplest. The challenge of the last work package is to make the solution perform fast. However, even if the outcome will degrade DRAM performance significantly, the research can still be considered successful and leave room for future research to optimise. I general, the proposed approach is realistic and the author is prepared for set-backs, as shown by the included risk assessments.
 
-\subsection*{Is the proposal well-written and are the project’s objectives clearly worded?}
-- Duplication between challenges and work packages.
-- Figures support the explanation of presented concepts.
+\subsubsection*{Is the proposal well-written and are the project’s objectives clearly worded?}
+In general the paper is well structured and the objectives are clearly worded. The figures included support the concepts presented. A weak point of the proposal is the duplication between challenges and work packages. The information presented in these two sections would have been better presented if the sections were combined. % TODO: evidence
 
-\subsection*{What is your opinion on the scientific, societal and/or economic impact of the proposed research? Are the expected results of the research relevant for solving a societal/economic/cultural/ technical or policy-related challenge?}
-- Prevents real world attacks.
-- Performance impact.
-- Enables new research, e.g. the rowhammer emulator.
+\subsubsection*{What is your opinion on the scientific, societal and/or economic impact of the proposed research? Are the expected results of the research relevant for solving a societal/economic/cultural/ technical or policy-related challenge?}
+Rowhammer can be used in real-world attacks \cite{van2016drammer}. Mitigating DRAM corruption vulnerabilities with the proposed research can have tangible impact on both society and economy by preventing hacks. However, the author will have to convince end-users that the performance impact is worth the security benefit. Additionally, the development of the proposed Rowhammer emulator will assist the scientific community in further research on Rowhammer.
 
-\subsection*{How do you assess the entire application? Please give the final scoring for your assessment, on a 1(low) to 10 (high) scale.}
+\subsubsection*{How do you assess the entire application? Please give the final scoring for your assessment, on a 1(low) to 10 (high) scale.}
+8.
 
-\subsection*{Could you please summarise or briefly comment (point by point) on the strengths and weaknesses of the proposed research? [Note that this question is about the proposed research and not about the writing style of the proposal!]}
+\subsubsection*{Could you please summarise or briefly comment (point by point) on the strengths and weaknesses of the proposed research? [Note that this question is about the proposed research and not about the writing style of the proposal!]}
+\paragraph{Strengths}
+\begin{itemize}
+  \item Relevancy is illustrated by inability of hardware vendors to mitigate fundamental flaw.
+  \item Generically solves the problem for all hardware and all software stacks.
+  \item Realistic approach.
+  \item Employs existing mechanisms of operating systems.
+  \item Real-world impact.
+\end{itemize}
+
+\paragraph{Weaknesses}
+\begin{itemize}
+  \item Not foundational research.
+  \item The problem is not original.
+  \item Separation into secure and insecure protection domains is not original.
+\end{itemize}
