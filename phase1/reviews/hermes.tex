@@ -2,29 +2,36 @@
 2. Hermes
 
 \subsubsection*{What is the scholarly, scientific or technological relevance of the problem? Is the problem original, timely, challenging?}
+The performance of IO devices is increasing faster than the performance of CPUs. The problem with this trend is that IO devices are becoming bottlenecked by the CPU. This is a timely problem because this trend has only been recently observed, as CPU performance is increasing less than in the past. The problem itself is not original as demonstrated by the overview of existing work in the proposal. The problem is challenging because computer systems are heterogeneous and each IO device has unique characteristics. Generalizing over this problem space is a challenge.
 
 \subsubsection*{What are the innovative and original aspects of the proposal? Are the project objectives challenging and scientifically ground-breaking?}
-- Challenges assumption that CPU is fastest part of computer.
+The author proposes a generic framework for moving computation from the CPU towards input/output (IO) devices. Moving computation from the CPU to IO devices is not original but doing this in a generalized approach is original. Furthermore, the objective to remain compatible with existing infrastructure and frameworks is challenging because of the diversity and complexity of this foundation.
 
 \subsubsection*{Is the approach suitable, including a practical work programme? How do you assess the program of work described in the proposal (realistic, feasible, ...)?}
-- Machine learning "magic".
+The project has been divided into separate work packages. The author has identified possible risks for each work package, which increases the feasibility. I assess work package ``Hermes-accelerated Spark in Serverless to manage device complexity in the cloud'' as not realistic because of the sheer complexity of clouds, the heterogeneity of the devices that constitute clouds, and because of the naive deployment of machine learning to solve this problem. I expect cloud workloads to be too diverse to be accurately predictable by machine learning and the author does not propose an alternative. However, a strength of the approach in the proposal is the usage of accepted scientific methodologies.
 
 \subsubsection*{Is the proposal well-written and are the project’s objectives clearly worded?}
-- No clear title.
-- Figure 3 is not clear.
-- Figure 3 title is behind image.
-- Limited use of (sub)sections, huge "Overall aim and key objectives" section.
+In general the proposal is structured well by presenting the problem, objectives, methodologies, planning, and valorization in a logical way. However, it contains several shortcomings. Firstly, the proposal does not start with a title. Secondly, several sections would have benefitted from further division into subsections. For example, the first section ``Overall aim and key objectives'' could have divided in a problem statement, a presentation of existing work, and the objectives of the proposed project. Furthermore, the proposal does not explain what cloud-ready (G4) exactly means. Finally, the image in Figure-3 is, sloppily, projected over its title.
 
 \subsubsection*{What is your opinion on the scientific, societal and/or economic impact of the proposed research? Are the expected results of the research relevant for solving a societal/economic/cultural/ technical or policy-related challenge?}
-- Paradigm shift from optimizing for CPU to optimizing for IO.
+The proposed research might accelerate the paradigm shift from in-CPU computing to in-IO device computing. This could lead to continued performance improvements despite the discontinuation of Moore's Law. Data heavy industries and research areas will benefit most from the proposed project. Within academia this could lead to improved accuracy in simulations or observations, for example in climate modelling or data processing from telescopes. Furthermore, the proposed project could lower the barrier for online edge-computing. One example of this would be the processing of biometric data from wearables. In this particular example this could lead to better privacy and less data traffic and consequently a lower energy footprint. A weakness of the proposal is fine-tuning the research on cloud environments. This is a profitable engineering challenge that is better solved by industry, as the proposal ultimately reduces energy footprint and the amount of hardware required in the cloud.
 
 \subsubsection*{How do you assess the entire application? Please give the final scoring for your assessment, on a 1(low) to 10 (high) scale.}
+7.
 
 \subsubsection*{Could you please summarise or briefly comment (point by point) on the strengths and weaknesses of the proposed research? [Note that this question is about the proposed research and not about the writing style of the proposal!]}
 \paragraph{Strengths}
 \begin{itemize}
+    \item Generic approach to solve the problem of IO devices being bottlenecked by the CPU.
+    \item Challenging problem.
+    \item Remains compatible with existing infrastructure and frameworks.
+    \item Uses accepted scientific methodologies.
+    \item Many beneficiaries in both industry and the scientific community.
 \end{itemize}
 
 \paragraph{Weaknesses}
 \begin{itemize}
+    \item Unoriginal problem.
+    \item Partly solves engineering cloud problem for industry.
+    \item Puts too much faith in machine learning.
 \end{itemize}
