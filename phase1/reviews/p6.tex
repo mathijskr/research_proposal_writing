@@ -2,40 +2,35 @@
 4. P6: Prioritization for Prompt Patching of Programs with Pernicious Problems
 
 \subsubsection*{What is the scholarly, scientific or technological relevance of the problem? Is the problem original, timely, challenging?}
-- More bugs are discovered than IT organizations can patch
-- No real-world applicability ranking of vulnerabilities
-- Some vulnerabilities can be combined to create better exploits
-- Timely: automatic scanners, fuzzers etc. recently increased the rate of bug discovery
+Recent advances in vulnerability scanners, such as fuzzers have been so successful that organizations can not keep up with the rate at which vulnerabilities are discovered, this makes the problem at hand a timely problem. This problem is original compared to previous research as previous research assumed that all bugs must and can be patched in a timely manner, whereas the author of this proposal proposes that we can make a selection of critical bugs to focus on. The problem is also technologically challenging as assessing the exploitability of vulnerabilities through for example symbolic execution is a very expensive process.
 
 \subsubsection*{What are the innovative and original aspects of the proposal? Are the project objectives challenging and scientifically ground-breaking?}
-- Capability theory
-- Multi vulnerability reasoning
-- Partial patching
-- Holistic
+The innovative and original aspects of the proposal are the development of a capability theory, the idea of partial patching, and the holistic approach to vulnerability management. The proposed novel capability theory, in particular, is scientifically ground-breaking because it will allow multi vulnerability reasoning. Some vulnerabilities are more powerful in combination with other vulnerabilities. Furthermore, the proposed technique of partial patching wherein vulnerabilities are not completely patched but patched just enough to be rendered harmless is original. Automating these new developments and making them scalable to real world applications will be challenging.
 
 \subsubsection*{Is the approach suitable, including a practical work programme? How do you assess the program of work described in the proposal (realistic, feasible, ...)?}
-- Employing experts on different aspects of the project
-- Builds on proven concepts
-- Extensive risk plan
+The project will build on proven existing concepts such as symbolic execution and employs experts in these concepts. Furthermore, the proposal comes with an extensive risk plan that provides an alternative approach for every work package in the case of a setback. The project is divided into work packages with realistic deadlines. Additionally, knowledge from research, engineering, and industry is combined. In general, I assess the approach as feasible.
 
 \subsubsection*{Is the proposal well-written and are the project’s objectives clearly worded?}
-Yes
-- small consistency thing: \$4.35 million, 50 billions of dollars, 12Meuro
+The proposal is well-written except for a small consistency issue of expressing monetary values: ``\$4.35 million'', ``50 billions of dollars'', and ``12Meuro'' are mixed. The objectives are clearly worded as demonstrated by the division into work packages that can be understood without reading context.
 
 \subsubsection*{What is your opinion on the scientific, societal and/or economic impact of the proposed research? Are the expected results of the research relevant for solving a societal/economic/cultural/ technical or policy-related challenge?}
-- Pragmatism
-- More cost effective patching
-- Scientific: capability theory
-- Societal: economic impact, privacy
-- Open source
+The project will have a scientific impact mainly from the development of a capability theory of vulnerabilities. Especially the ability to reason about multi vulnerability risk is a significant contribution. The project can also have an economic impact because the partial patching and the prioritization of critical vulnerabilities can lead to less disruptive patching and less patching in general, which leads to cost savings. The societal impact mostly comes from enabling organizations to better secure their digital assets. The main weakness of the proposed project is its likely inability to handle novel types of attacks. I do not expect the project to be able to generate patches and analyze the severity of completely new classes of attacks. The project will not yield techniques to equip organization to react on novel attacks.
 
 \subsubsection*{How do you assess the entire application? Please give the final scoring for your assessment, on a 1(low) to 10 (high) scale.}
+9.
 
 \subsubsection*{Could you please summarise or briefly comment (point by point) on the strengths and weaknesses of the proposed research? [Note that this question is about the proposed research and not about the writing style of the proposal!]}
 \paragraph{Strengths}
 \begin{itemize}
+  \item Original capability theory.
+  \item Reasoning about multi vulnerability impact.
+  \item Holistic approach.
+  \item Partial patching.
+  \item Diverse knowledge utilization.
+  \item Backup plan for setbacks in work packages.
 \end{itemize}
 
 \paragraph{Weaknesses}
 \begin{itemize}
+  \item No mitigation of original attacks.
 \end{itemize}
