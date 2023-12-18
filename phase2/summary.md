@@ -1,4 +1,4 @@
-Spectrebuster: proofing leakage-free speculative execution
+# Spectrebuster: proofing leakage-free speculative execution
 
 Modern day CPUs start executing instructions in the future before the current instruction has completed in what is called a pipeline.
 When the CPU encounters a branch instruction, it speculates on which instruction to execute next.
